@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   has_many :subjects, through: :user_subjects
   has_many :user_tasks, dependent: :destroy
   has_many :tasks, through: :user_tasks
-
+  
   has_secure_password
 
   validates :name,  presence: true, length: {maximum: 50}
